@@ -44,22 +44,27 @@ while (option != 3) {
     3. Sair do programa
     `));
 
-    
+    switch (option) {
+      case 1:
+        let item = prompt("Digite o nome do item que deseja inserir na lista")
+        items.push(item)
+      break
 
-    if (option == 1) {
-       let item = prompt("Digite o nome do item que deseja inserir na lista")
-       items.push(item)
+      case 2:
+        if(items.length == 0 ) {
+          alert ('Não existem itens cadastrados')
+         } else {
+          alert(items);
+         }
+      break
+
+      case 3:
+        alert("Goodbye 👋")
+        break
+        default:
+          alert('Opção inválida. Tenta novamente.')
     }
-    
-    else if (option == 2){
-       if(items.length == 0 ) {
-        alert ('Não existem itens cadastrados')
-       } else {
-        alert(items);
-       }
-    } else {
-        alert("Goodbye")
-    }
+
 }
 
 
